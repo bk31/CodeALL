@@ -1,6 +1,6 @@
-﻿namespace PolyMorphism
+﻿namespace Factory
 {
-    public class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
