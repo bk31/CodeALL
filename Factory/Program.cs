@@ -19,10 +19,22 @@ namespace Factory
             //}
 
             IGeometryFactory geometryFactory = GeometryFactory.GetGeometry("Hexagon");
-            if(geometryFactory != null)
+            if (geometryFactory != null)
             {
                 Console.WriteLine("Shape : " + geometryFactory.Draw());
             }
+            Console.WriteLine("\t\n");
+
+            Console.WriteLine("Enter a database Type");
+            string type=Console.ReadLine();
+
+            IDataBaseFactory dataBaseFactory = DataBaseFactory.GetBaseFactory(type);
+            //dataBaseFactory.GetType();
+            if (dataBaseFactory != null)
+            {
+                Console.WriteLine("Database : " + dataBaseFactory.DatabaseType());
+            }
+
         }
     }
     public interface ICreditCard
